@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Employee | Inovexa Technology</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="login-page">
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html">
+
+                <img
+                    class="logo"
+                    src="logo.jpg"
+                    alt="Inovexa Technology Logo"
+                >
+
+            </a>
+
+
+            <div class="company-name">
+
+                <h1>
+                    Inovexa Technology
+                </h1>
+
+                <p>
+                    Building Careers. Inspiring Innovation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="login-main">
+
+        <section class="login-box employee-form-box">
+
+            <p class="login-label">
+                INOVEXA TECHNOLOGY
+            </p>
+
+
+            <h2>
+                Add New Employee
+            </h2>
+
+
+            <p class="login-description">
+                Enter employee details below.
+            </p>
+
+
+            <!-- Employee Form -->
+
+            <form id="employeeForm">
+
+
+                <!-- Employee Name -->
+
+                <div class="form-group">
+
+                    <label for="employeeName">
+                        Employee Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeName"
+                        placeholder="Enter employee name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Department -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select
+                        id="department"
+                        required
+                    >
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="Development">
+                            Development
+                        </option>
+
+                        <option value="Human Resources">
+                            Human Resources
+                        </option>
+
+                        <option value="Design">
+                            Design
+                        </option>
+
+                        <option value="Marketing">
+                            Marketing
+                        </option>
+
+                        <option value="Finance">
+                            Finance
+                        </option>
+
+                        <option value="Management">
+                            Management
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label for="employeeRole">
+                        Job Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeRole"
+                        placeholder="Example: Software Developer"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Status -->
+
+                <div class="form-group">
+
+                    <label for="employeeStatus">
+                        Employee Status
+                    </label>
+
+                    <select
+                        id="employeeStatus"
+                        required
+                    >
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="On Leave">
+                            On Leave
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Message -->
+
+                <p id="employeeMessage"></p>
+
+
+
+                <!-- Buttons -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    Add Employee
+                </button>
+
+
+                <a
+                    href="hr-dashboard.html"
+                    class="register-link"
+                    style="display:block; margin-top:20px;"
+                >
+                    ← Back to Dashboard
+                </a>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="simple-footer">
+
+        <p>
+            © 2026 Inovexa Technology. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- IMPORTANT -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

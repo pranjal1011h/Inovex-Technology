@@ -1,0 +1,1558 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("inovexa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 15px 5%;
+    border-bottom: 1px solid #dddddd;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+    display: block;
+}
+
+.company-name h1 {
+    color: #173b63;
+    font-size: 28px;
+}
+
+.company-name p {
+    color: #555555;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    background-color: rgba(18, 55, 91, 0.96);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-container a:hover {
+    background-color: #f0a500;
+    color: #111111;
+}
+
+.nav-container .login-link {
+    background-color: #f0a500;
+    color: #111111;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+
+/* =========================================================
+   HOME - HERO
+   ========================================================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 55px 45px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.hero h2 {
+    color: #173b63;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #444444;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button,
+.card-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button,
+.card-button {
+    background-color: #173b63;
+    color: white;
+}
+
+.primary-button:hover,
+.card-button:hover {
+    background-color: #f0a500;
+    color: #111111;
+}
+
+.secondary-button {
+    background-color: white;
+    color: #173b63;
+    border: 2px solid #173b63;
+}
+
+.secondary-button:hover {
+    background-color: #173b63;
+    color: white;
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+   ========================================================= */
+
+.page-main {
+    min-height: 70vh;
+}
+
+.content-section {
+    padding: 70px 20px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-label {
+    color: #d68b00;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.section-container h2 {
+    color: #173b63;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section-container p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.info-card,
+.career-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+}
+
+.info-card h3,
+.career-card h3 {
+    color: #173b63;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.career-card {
+    border-left: 5px solid #f0a500;
+}
+
+.career-card ul {
+    margin: 15px 0 20px 20px;
+}
+
+
+/* =========================================================
+   INNOVATION
+   ========================================================= */
+
+.innovation-section {
+    padding: 90px 20px;
+    background-color: rgba(18, 55, 91, 0.94);
+    color: white;
+}
+
+.innovation-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.innovation-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.innovation-features {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.innovation-features div {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.innovation-features strong {
+    display: block;
+    color: #f0c35a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   THREE COLUMN
+   ========================================================= */
+
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.three-column article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+}
+
+.three-column h3 {
+    color: #173b63;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+    padding: 70px 20px;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.contact-container h2 {
+    color: #173b63;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #173b63;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 1px solid #173b63;
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+.login-page,
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-main,
+.register-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+
+/* =========================================================
+   LOGIN BOX
+   ========================================================= */
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 28px 35px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   REGISTER BOX - CORRECTED
+   ========================================================= */
+
+.register-box {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 35px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER LABEL
+   ========================================================= */
+
+.login-label,
+.register-label {
+    text-align: center;
+    color: #d68b00;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER HEADINGS
+   ========================================================= */
+
+.login-box h2,
+.register-box h2 {
+    text-align: center;
+    color: #173b63;
+    margin-bottom: 8px;
+}
+
+.login-box h2 {
+    font-size: 30px;
+}
+
+.register-box h2 {
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   DESCRIPTIONS
+   ========================================================= */
+
+.login-description,
+.register-description {
+    text-align: center;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #173b63;
+    box-shadow: 0 0 0 2px rgba(23, 59, 99, 0.10);
+}
+
+
+/* =========================================================
+   RADIO BUTTONS
+   ========================================================= */
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+
+/* =========================================================
+   LOGIN REMEMBER ROW
+   ========================================================= */
+
+.remember-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-row input {
+    width: auto;
+}
+
+.remember-row a,
+.register-link,
+.back-home a {
+    color: #173b63;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+    width: 100%;
+    padding: 11px;
+    background-color: #173b63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: #f0a500;
+    color: #111111;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.register-button {
+    width: 100%;
+    padding: 13px;
+    background-color: #173b63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: #f0a500;
+    color: #111111;
+}
+
+
+/* =========================================================
+   PASSWORD RULES
+   ========================================================= */
+
+.password-rules {
+    background-color: #f5f7fa;
+    border-left: 4px solid #173b63;
+    padding: 12px 15px;
+    margin: 5px 0 18px;
+    border-radius: 5px;
+}
+
+.password-rules p {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.password-rules ul {
+    margin-left: 18px;
+}
+
+.password-rules li {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   TERMS
+   ========================================================= */
+
+.terms {
+    margin: 18px 0;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.terms input {
+    width: auto;
+}
+
+
+/* =========================================================
+   REGISTER / LOGIN MESSAGE
+   ========================================================= */
+
+#registerMessage,
+#loginMessage {
+    text-align: center;
+    min-height: 20px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   REGISTER SECTION ON LOGIN PAGE
+   ========================================================= */
+
+.register-section {
+    text-align: center;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #dddddd;
+}
+
+.register-section p {
+    margin-bottom: 4px;
+}
+
+.register-link {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   LOGIN SECTION ON REGISTER PAGE
+   ========================================================= */
+
+.login-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dddddd;
+}
+
+.login-section p {
+    display: inline;
+    color: #666666;
+}
+
+.login-section a {
+    margin-left: 5px;
+    color: #173b63;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BACK HOME
+   ========================================================= */
+
+.back-home {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.back-home a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background-color: rgba(13, 30, 48, 0.98);
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    width: 65px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.copyright,
+.simple-footer {
+    text-align: center;
+    background-color: rgba(13, 30, 48, 0.98);
+    color: #cccccc;
+    padding: 10px;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HR DASHBOARD
+   ========================================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+.sidebar {
+    width: 240px;
+    background: #111827;
+    color: white;
+    padding: 25px 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.sidebar > p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #d1d5db;
+    padding: 12px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    background: #374151;
+    color: white;
+}
+
+
+/* =========================================================
+   DASHBOARD MAIN CONTENT
+   ========================================================= */
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 30px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h2 {
+    font-size: 28px;
+}
+
+.topbar p {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.profile span {
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   DASHBOARD STATS
+   ========================================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-card span {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   EMPLOYEES
+   ========================================================= */
+
+.employees {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.add-button {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+}
+
+.add-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f9fafb;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+
+/* Employee Status */
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.leave {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.quick-actions {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.quick-actions h2 {
+    margin-bottom: 20px;
+}
+
+.action-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.action-container a {
+    text-decoration: none;
+    background: #f3f4f6;
+    color: #1f2937;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.action-container a:hover {
+    background: #e5e7eb;
+}
+
+
+/* Dashboard Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PASSWORD CRITERIA
+   ========================================================= */
+
+.password-criteria {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.password-criteria p {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.password-criteria ul {
+    margin-left: 18px;
+}
+
+.password-criteria li {
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-container a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero-content {
+        padding: 35px 20px;
+    }
+
+    .section-container {
+        padding: 30px 20px;
+    }
+
+    .innovation-features,
+    .three-column,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .innovation-container h2 {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+    /* Dashboard */
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .dashboard {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .profile {
+        text-align: left;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    /* Register */
+
+    .register-main {
+        padding: 25px 15px;
+    }
+
+    .register-box {
+        padding: 28px 22px;
+    }
+
+    .register-box h2 {
+        font-size: 28px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-box {
+        padding: 25px 20px;
+    }
+
+    .login-box h2 {
+        font-size: 26px;
+    }
+
+    .remember-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .register-box {
+        padding: 25px 18px;
+    }
+
+    .register-box h2 {
+        font-size: 25px;
+    }
+}
+/* =========================================================
+   STUDENT & RECRUITMENT DASHBOARD
+   ========================================================= */
+
+.recruitment-overview {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.recruitment-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+
+.recruitment-card {
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #eeeeee;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.recruitment-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.card-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f5ff;
+
+    font-size: 25px;
+
+    flex-shrink: 0;
+}
+
+
+.recruitment-card h3 {
+    margin: 0 0 7px 0;
+
+    font-size: 15px;
+
+    color: #555555;
+}
+
+
+.recruitment-number {
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+
+.recruitment-card span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #777777;
+}
+
+
+
+/* =========================================================
+   STUDENT TABLE
+   ========================================================= */
+
+.students-section {
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.students-section .table-container {
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.students-section table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+.students-section th,
+.students-section td {
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+
+.students-section th {
+    background: #f7f8fc;
+
+    font-weight: 600;
+
+    color: #333333;
+}
+
+
+.students-section tbody tr:hover {
+    background: #fafbff;
+}
+
+
+
+/* =========================================================
+   CANDIDATE STATUS
+   ========================================================= */
+
+.candidate-status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.status-yes {
+    background: #e8f7ee;
+
+    color: #16803c;
+}
+
+
+.status-no {
+    background: #fceaea;
+
+    color: #c62828;
+}
+
+
+.status-selected {
+    background: #e6f0ff;
+
+    color: #1557a5;
+}
+
+
+.status-pending {
+    background: #fff5df;
+
+    color: #9a6700;
+}
+@media (max-width: 1100px) {
+
+    .recruitment-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .recruitment-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .recruitment-card {
+        padding: 18px;
+    }
+
+
+    .recruitment-number {
+        font-size: 28px;
+    }
+
+}
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 10px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.option-label input {
+    width: auto;
+
+    cursor: pointer;
+}
+
+
+#attendanceGroup {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: #f7f8fc;
+
+    border-radius: 8px;
+}
+
+.dashboard-button {
+    background: #17233d;
+    color: white !important;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.dashboard-button:hover {
+    background: #2d3f63;
+
+    transform: translateY(-2px);
+}
+
+.dashboard-button {
+    display: inline-block;
+
+    background: #17233d;
+
+    color: #ffffff !important;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    text-decoration: none !important;
+
+    font-weight: 600;
+
+    margin-left: 5px;
+
+    transition: all 0.3s ease;
+}
+
+
+.dashboard-button:hover {
+    background: #2d3f63;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+}
+.table-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.table-controls input,
+.table-controls select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.table-controls input {
+    flex: 1;
+    min-width: 250px;
+}
+
+.table-controls select {
+    min-width: 180px;
+}

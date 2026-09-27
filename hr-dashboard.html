@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Inovexa Technology HR Dashboard">
+
+    <title>HR Dashboard | Inovexa Technology</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dashboard JavaScript -->
+    <script src="dashboard.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar">
+
+        <h1>Inovexa</h1>
+
+        <p>HR Management</p>
+
+
+        <nav>
+
+            <!-- Dashboard -->
+            <a href="hr-dashboard.html"
+               class="dashboard-button">
+                Dashboard
+            </a>
+
+
+            <!-- Employees -->
+            <a href="#employees">
+                Employees
+            </a>
+
+
+            <!-- Students -->
+            <a href="#students">
+                Students
+            </a>
+
+
+            <!-- Recruitment -->
+            <a href="#recruitment">
+                Recruitment
+            </a>
+
+
+            <!-- Leave -->
+            <a href="#leave">
+                Leave
+            </a>
+
+
+            <!-- Settings -->
+            <a href="#settings">
+                Settings
+            </a>
+
+
+            <!-- Logout -->
+            <a href="javascript:void(0)"
+               id="logoutButton">
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+             ================================================= -->
+
+        <header class="topbar"
+                id="dashboard">
+
+            <div>
+
+                <h2>
+                    HR Dashboard
+                </h2>
+
+                <p>
+                    Manage employees, students and recruitment activities
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <strong>
+                    HR Manager
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             WELCOME SECTION
+             ================================================= -->
+
+        <section class="welcome">
+
+            <h2>
+                Welcome back, HR Manager!
+            </h2>
+
+            <p>
+                Here's an overview of Inovexa Technology's
+                current HR and recruitment activities.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HR STATISTICS
+             ================================================= -->
+
+        <section class="stats">
+
+
+            <!-- TOTAL EMPLOYEES -->
+
+            <article class="stat-card">
+
+                <h3>
+                    Total Employees
+                </h3>
+
+                <p class="number"
+                   id="totalEmployees">
+                    0
+                </p>
+
+                <span>
+                    Active employees
+                </span>
+
+            </article>
+
+
+
+            <!-- ON LEAVE -->
+
+            <article class="stat-card">
+
+                <h3>
+                    On Leave
+                </h3>
+
+                <p class="number"
+                   id="totalLeave">
+                    0
+                </p>
+
+                <span>
+                    Currently on leave
+                </span>
+
+            </article>
+
+
+
+            <!-- NEW HIRES -->
+
+            <article class="stat-card">
+
+                <h3>
+                    New Hires
+                </h3>
+
+                <p class="number"
+                   id="newHires">
+                    0
+                </p>
+
+                <span>
+                    Added employees
+                </span>
+
+            </article>
+
+
+
+            <!-- PENDING REQUESTS -->
+
+            <article class="stat-card">
+
+                <h3>
+                    Pending Requests
+                </h3>
+
+                <p class="number"
+                   id="pendingRequests">
+                    0
+                </p>
+
+                <span>
+                    Need attention
+                </span>
+
+            </article>
+
+        </section>
+
+<div class="table-controls">
+    <input
+        type="text"
+        id="studentSearch"
+        placeholder="Search student by name or email..."
+    >
+
+    <select id="studentFilter">
+        <option value="all">All Students</option>
+        <option value="innovation">Innovation Program</option>
+        <option value="job">Job Applicants</option>
+        <option value="selected">Selected</option>
+    </select>
+</div>
+
+        <!-- =================================================
+             STUDENT & RECRUITMENT OVERVIEW
+             ================================================= -->
+
+        <section class="recruitment-overview"
+                 id="recruitment">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Student & Recruitment Overview
+                    </h2>
+
+                    <p>
+                        Track innovation registrations and job recruitment
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="recruitment-stats">
+
+
+                <!-- INNOVATION REGISTRATIONS -->
+
+                <article class="recruitment-card">
+
+                    <div class="card-icon">
+                        💡
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Innovation Registrations
+                        </h3>
+
+                        <p class="recruitment-number"
+                           id="innovationCount">
+                            0
+                        </p>
+
+                        <span>
+                            Students registered
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- JOB APPLICANTS -->
+
+                <article class="recruitment-card">
+
+                    <div class="card-icon">
+                        💼
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Job Applicants
+                        </h3>
+
+                        <p class="recruitment-number"
+                           id="jobApplicantCount">
+                            0
+                        </p>
+
+                        <span>
+                            Students interested in jobs
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- EXPECTED TO ATTEND -->
+
+                <article class="recruitment-card">
+
+                    <div class="card-icon">
+                        📅
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Expected to Attend
+                        </h3>
+
+                        <p class="recruitment-number"
+                           id="attendanceCount">
+                            0
+                        </p>
+
+                        <span>
+                            Students attending job drive
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SELECTED STUDENTS -->
+
+                <article class="recruitment-card">
+
+                    <div class="card-icon">
+                        ✅
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Selected Students
+                        </h3>
+
+                        <p class="recruitment-number"
+                           id="selectedCount">
+                            0
+                        </p>
+
+                        <span>
+                            Students selected
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STUDENT SECTION
+             ================================================= -->
+
+        <section class="students-section"
+                 id="students">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Student Recruitment List
+                    </h2>
+
+                    <p>
+                        Only students registered through Inovexa
+                        will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">
+                                Student ID
+                            </th>
+
+
+                            <th scope="col">
+                                Name
+                            </th>
+
+
+                            <th scope="col">
+                                Email
+                            </th>
+
+
+                            <th scope="col">
+                                Innovation
+                            </th>
+
+
+                            <th scope="col">
+                                Job Applicant
+                            </th>
+
+
+                            <th scope="col">
+                                Will Attend
+                            </th>
+
+
+                            <th scope="col">
+                                Selection
+                            </th>
+
+
+                            <th scope="col">
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <!-- JavaScript will insert registered students here -->
+
+                    <tbody id="candidateTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMPLOYEE SECTION
+             ================================================= -->
+
+        <section id="employees"
+                 class="employees">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Recent Employees
+                    </h2>
+
+                    <p>
+                        Employees added by HR.
+                    </p>
+
+                </div>
+
+
+                <!-- ADD EMPLOYEE -->
+
+                <a href="employee-form.html"
+                   class="add-button">
+
+                    + Add Employee
+
+                </a>
+
+            </div>
+
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">
+                                Employee ID
+                            </th>
+
+
+                            <th scope="col">
+                                Name
+                            </th>
+
+
+                            <th scope="col">
+                                Department
+                            </th>
+
+
+                            <th scope="col">
+                                Role
+                            </th>
+
+
+                            <th scope="col">
+                                Status
+                            </th>
+
+
+                            <th scope="col">
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <!-- JavaScript will insert employees here -->
+
+                    <tbody id="employeeTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEAVE SECTION
+             ================================================= -->
+
+        <section id="leave"
+                 class="dashboard-section">
+
+
+            <h2>
+                Leave Management
+            </h2>
+
+
+            <p>
+                Employees currently on leave.
+            </p>
+
+
+
+            <div class="info-card">
+
+                <h3>
+                    Employees Currently on Leave
+                </h3>
+
+
+                <ul id="leaveList">
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SETTINGS SECTION
+             ================================================= -->
+
+        <section id="settings"
+                 class="dashboard-section">
+
+
+            <h2>
+                Settings
+            </h2>
+
+
+            <p>
+                HR dashboard settings.
+            </p>
+
+
+
+            <div class="info-card">
+
+                <h3>
+                    Inovexa HR Management System
+                </h3>
+
+
+                <p>
+                    Student and employee information is stored
+                    locally in this browser.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="danger-button"
+                    id="clearDataButton">
+
+                    Clear Employee Data
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+             ================================================= -->
+
+        <section class="quick-actions">
+
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+
+            <div class="action-container">
+
+
+                <!-- ADD EMPLOYEE -->
+
+                <a href="employee-form.html">
+
+                    Add New Employee
+
+                </a>
+
+
+
+                <!-- VIEW STUDENTS -->
+
+                <a href="#students">
+
+                    View Students
+
+                </a>
+
+
+
+                <!-- VIEW RECRUITMENT -->
+
+                <a href="#recruitment">
+
+                    View Recruitment
+
+                </a>
+
+
+
+                <!-- VIEW LEAVE -->
+
+                <a href="#leave">
+
+                    View Leave
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer>
+
+            <p>
+
+                &copy; 2026 Inovexa Technology.
+                HR Management System.
+
+            </p>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+</body>
+
+</html>
